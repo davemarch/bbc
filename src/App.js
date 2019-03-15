@@ -21,14 +21,19 @@ class App extends Component {
     news2 : [
              {img : image04, headline : "Reaction from the Carabao Cup and Premier League", subcat : "Football"},
              {img : image05, headline : "Sarri undermined by disgraceful insubordination", subcat : "Football"},
-             {img : image06, headline : "The biggest fight in British history - Tyson v Bruno 30 years on", subcat : "Boxing"}]
+             {img : image06, headline : "The biggest fight in British history - Tyson v Bruno 30 years on", subcat : "Boxing"}],
+    newsHeadline : {header : "News Headlines >"},
+    sportHeadline : {header : "Sport Headlines >"}
+
+
+    
 
   }
   render() {
     return (
       <div className="App">
-          <Container header = "News Headlines >" news = {this.state.news}/>
-          <Container header = "Sport Headlines >" news = {this.state.news2}/>
+          <Container header = {this.state.newsHeadline.header} news = {this.state.news}/>
+          <Container header = {this.state.sportHeadline.header} news = {this.state.news2}/>
       </div>
     );
   }
